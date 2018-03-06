@@ -1,0 +1,88 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>wingman_mobile_automation</groupId>
+	<artifactId>wingman</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>jar</packaging>
+
+	<name>wingman</name>
+	<url>http://maven.apache.org</url>
+
+	<build>
+		<sourceDirectory>${basedir}/src/main/java</sourceDirectory>
+		<scriptSourceDirectory>${basedir}/src/main/scripts</scriptSourceDirectory>
+		<testSourceDirectory>${basedir}/src/main/java</testSourceDirectory>
+		<outputDirectory>${basedir}/target/classes</outputDirectory>
+		<testOutputDirectory>${basedir}/target/test-classes</testOutputDirectory>
+	
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>2.12.4</version>
+				<configuration>
+					<systemPropertyVariables>
+						<envSystem>${env.SYSTEM}</envSystem>
+						<envSessionName>${env.SESSION_NAME}</envSessionName>
+						<envSessionDescription>${env.DESCRIPTION}</envSessionDescription>
+						<envScreenShots>${env.SCREENSHOTS}</envScreenShots>
+						<deviceOrientation>${env.DEVICE_ORIENTATION}</deviceOrientation>
+						<deviceGroup>${env.DEVICE_GROUP}</deviceGroup>
+						<deviceName>${env.DEVICE_NAME}</deviceName>
+						<platformVersion>${env.PLATFORM_VERSION}</platformVersion>
+						<platformName>${env.PLATFOR_MNAME}</platformName>
+						<testingApp>${env.APP}</testingApp>
+						<!-- <kobitonServerUrl>{KOBITON_SERVER_URL}</kobitonServerUrl> -->
+					</systemPropertyVariables>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+	<dependencies>
+		<dependency>
+			<groupId>io.appium</groupId>
+			<artifactId>java-client</artifactId>
+			<version>4.1.2</version>
+		</dependency>
+
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>1.2.17</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.json</groupId>
+			<artifactId>json</artifactId>
+			<version>20171018</version>
+		</dependency>
+
+		<dependency>
+			<groupId>net.sourceforge.jexcelapi</groupId>
+			<artifactId>jxl</artifactId>
+			<version>2.6.12</version>
+		</dependency>
+
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.8.2</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.httpcomponents</groupId>
+			<artifactId>httpclient</artifactId>
+			<version>4.5.5</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.googlecode.json-simple</groupId>
+			<artifactId>json-simple</artifactId>
+			<version>1.1</version>
+		</dependency>
+
+	</dependencies>
+</project>

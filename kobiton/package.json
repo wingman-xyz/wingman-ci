@@ -1,0 +1,17 @@
+{
+  "name": "kobiton",
+  "version": "1.0.0",
+  "description": "Kobiton integration CI",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Harik Lee",
+  "license": "ISC",
+  "dependencies": {
+    "btoa": "^1.1.2",
+    "child-process": "^1.0.2",
+    "node-fetch": "^1.7.3",
+    "xlsx": "^0.11.19"
+  }
+}
